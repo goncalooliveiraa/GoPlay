@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pt.iade.GoPlay.models.Jogo;
 import pt.iade.GoPlay.models.exceptions.NotFoundException;
 import pt.iade.GoPlay.models.repositories.JogoRepository;
+import pt.iade.GoPlay.models.views.JogosView;
 
 
 @RestController
@@ -37,6 +38,11 @@ public class JogoController {
         else return _jogo.get() ;
     }
 
+    @GetMapping(path = "/lista", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<JogosView> getJogosDisponiveis() {
+        logger.info("A enviar a lista de todos os jogos disponiveis ");
+        return jogoRepository.getJogosDisponiveis();
+    }
 
 }
 /*

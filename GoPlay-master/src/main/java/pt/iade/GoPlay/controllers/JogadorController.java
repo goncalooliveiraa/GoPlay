@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pt.iade.GoPlay.models.exceptions.NotFoundException;
 import pt.iade.GoPlay.models.Jogador;
+import pt.iade.GoPlay.models.exceptions.NotFoundException;
 import pt.iade.GoPlay.models.repositories.JogadorRepository;
 import pt.iade.GoPlay.models.views.LeaderboardJ;
 

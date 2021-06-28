@@ -14,9 +14,9 @@ import javax.persistence.Table;
 public class TipoJogo {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name="Id")
+    @Column(name="TP_Id")
     private int id;
-    @Column(name="Nome")
+    @Column(name="TP_Nome")
     private String nome;
 
     public TipoJogo() {}

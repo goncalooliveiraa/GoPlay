@@ -16,12 +16,14 @@ import javax.persistence.Table;
 public class Torneio {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name="Id")
+    @Column (name="Torn_Id")
     private int id;
-    @Column (name="NumeroJog")
-    private int NumeroJog;
-    @Column (name="Data")
+    @Column (name="Torn_Jogadores")
+    private int numJogadores;
+    @Column (name="Torn_Data")
     private Date data;
+    @Column (name="Torn_TipoJogo")
+    private String tipoJogo;
 
     public Torneio() {}
 
@@ -29,11 +31,15 @@ public class Torneio {
         return id;
     }
 
-    public int getNumeroJog(){
-        return NumeroJog;
+    public int getNumJogadores(){
+        return numJogadores;
     }
 
     public Date getData(){
         return data;
     }
+    public String getTipoJogo(){
+        return tipoJogo;
+    }
 }
+

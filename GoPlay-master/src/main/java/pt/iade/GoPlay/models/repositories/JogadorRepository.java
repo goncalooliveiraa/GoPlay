@@ -15,16 +15,3 @@ public interface JogadorRepository extends CrudRepository<Jogador, Integer>{
     Iterable<LeaderboardJ> getLeaderboardJ();
 
 }
-
-
-/*
-public interface JogadorRepository extends CrudRepository<Jogador, Integer>{
-    Iterable<Jogador> findByNameContaining(String text);
-
-    @Query (value="SELECT Jog_Id as id," +
-            "Jog_NomeP as nome, "+
-            "Jog_NomeA as apelido, "+
-            "Jog_Pontos as pontos"
-            ,nativeQuery=true)
-            Jogador FindJogadorId( int id);
-}*/

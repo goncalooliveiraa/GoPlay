@@ -14,17 +14,23 @@ import javax.persistence.Table;
 public class Arbitro {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name="Id")
+    @Column (name="Arb_Id")
     private int id;
-    @Column (name="TotalJogos")
+    @Column (name="Arb_Nome")
+    private String nome;
+    @Column (name="Arb_TotalJogos")
     private int totalJogos;
-    @Column (name="Pontos")
+    @Column (name="Arb_Pontos")
     private int pontos;
 
     public Arbitro() {}
 
     public int getId() {
         return id;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public int getTotalJogos() {

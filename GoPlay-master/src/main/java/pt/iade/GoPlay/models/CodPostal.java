@@ -14,15 +14,15 @@ import javax.persistence.Table;
 public class CodPostal {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name="Id")
+    @Column (name="CP_Id")
     private int id;
-    @Column (name="4D")
+    @Column (name="CP_4D")
     private int digitos4;
-    @Column (name="3D")
+    @Column (name="CP_3D")
     private int digitos3;
-    @Column (name="Freguesia")
+    @Column (name="CP_Freguesia")
     private String freguesia;
-    @Column (name="Quarteirao")
+    @Column (name="CP_Quart")
     private String quarteirao;
 
     public CodPostal() {}

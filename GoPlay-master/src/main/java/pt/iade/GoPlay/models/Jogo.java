@@ -15,12 +15,12 @@ import javax.persistence.Table;
 public class Jogo {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name="Id")
+    @Column(name="Jogo_Id")
     private int id;
-    @Column(name="Data")
+    @Column(name="Jogo_Data")
     private Date data;
-    @Column(name="Local")
-    private String local;
+    @Column(name="Jogo_Adversario")
+    private String adversario;
 
     public Jogo() {}
 
@@ -32,7 +32,7 @@ public class Jogo {
         return data;
     }
 
-    public String getLocal() {
-        return local;
+    public String getAdversario() {
+        return adversario;
     }
 }
