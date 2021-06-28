@@ -8,12 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import pt.iade.GoPlay.models.Torneio;
 import pt.iade.GoPlay.models.exceptions.NotFoundException;
 import pt.iade.GoPlay.models.repositories.TorneioRepository;
+import pt.iade.GoPlay.models.views.Inscricao;
+import pt.iade.GoPlay.models.views.Torneios;
 
 @RestController
 @RequestMapping(path = "/api/torneios")
@@ -44,4 +48,17 @@ public class TorneioController {
         torneioRepository.deleteById(id);
         return new Response("A apagar o torneio com o id: "+id, null);
     }*/
+
+    @GetMapping(path = "/lista", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Torneios> getTorneios() {
+        logger.info("A enviar a lista de todos os torneios disponiveis ");
+        return torneioRepository.getTorneios();
+    }
+
+    @PostMapping(path = "/{id}/inscricoes", produces= MediaType.APPLICATION_JSON_VALUE)
+    public int saveTorneioInscricao(@PathVariable int id, @RequestBody Inscricao inscricao) {
+        logger.info("Saving new track on album with id: "+id);
+        logger.info(inscricao.toString());
+        return torneioRepository.saveTorneioInscricao(id,inscricao);
+    }
 }
