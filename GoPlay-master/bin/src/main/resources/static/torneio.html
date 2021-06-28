@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> GoPlay - Organizar Torneio </title>
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="stylesheets/output.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="javascripts/addJogo.js"></script>
+    </head>
+    <body>
+        <header> ORGANIZAR TORNEIO </header>    
+        <main >
+            <h2>Data: <input type="date" id="data"></h2>
+            <h2>Local: <input type="text" id="adversario"></h2>
+            <h2>Tipo de Jogo: <input type="text" id="tipoJogo"></h2>
+            <h2>Número Máx de Jogadores: <input type="text" id="numMax"></h2>
+            <h2><input type="button" value="Organizar" 
+                onclick="addTorneio()"></h2>
+        </main>
+    </body>
+</html>
