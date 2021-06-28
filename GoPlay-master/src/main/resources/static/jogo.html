@@ -1,20 +1,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> JS </title>
+        <title> GoPlay - Organizar Jogo </title>
         <link rel="stylesheet" href="stylesheets/style.css">
         <link rel="stylesheet" href="stylesheets/output.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="javascripts/addJogo.js"></script>
     </head>
     <body>
-        <header> Organizar Jogo </header>    
+        <header> ORGANIZAR JOGO </header>    
         <main >
-            <h2>Data: <input type="text" id="data"></h2>
-            <h2>Adversário: <select id="adversario"></select></h2>
-            <h2><input type="button" value="Organizar" 
-                onclick="addJogo()"></h2>
+            <h2>Data: <input type="date" id="data"></h2>
+            <h2>Local: <input type="text" id="adversario"></h2>
+            <h2>Tipo Jogo: <select id="tipoJogo"></select></h2>
+            <h2><input type="button" value="Continuar" 
+                onclick="window.location='listaJogadores.html'"></h2>
         </main>
-        <footer> FOOTER </footer>
     </body>
 </html>

@@ -42,13 +42,6 @@ public class TorneioController {
             return _torneio.get();
     }
 
-   /* @DeleteMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response deleteTorneio(@PathVariable int id) {
-        logger.info("A apagar o torneio com o id: " + id);
-        torneioRepository.deleteById(id);
-        return new Response("A apagar o torneio com o id: "+id, null);
-    }*/
-
     @GetMapping(path = "/lista", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Torneios> getTorneios() {
         logger.info("A enviar a lista de todos os torneios disponiveis ");
@@ -61,4 +54,11 @@ public class TorneioController {
         logger.info(inscricao.toString());
         return torneioRepository.saveTorneioInscricao(id,inscricao);
     }
+
+     /* @DeleteMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Response deleteTorneio(@PathVariable int id) {
+        logger.info("A apagar o torneio com o id: " + id);
+        torneioRepository.deleteById(id);
+        return new Response("A apagar o torneio com o id: "+id, null);
+    }*/
 }

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,25 +45,11 @@ public class ArbitroController {
         logger.info("A enviar a leaderboard de todos os arbitros ");
         return arbitroRepository.getLeaderboardA();
     }
-/*
+
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
     public Arbitro saveArbitro(@RequestBody Arbitro newArbitro) {
         logger.info("A guardar o arbitro com o nome: "+newArbitro.getNome());
         Arbitro arbitro = arbitroRepository.save(newArbitro);
         return arbitro;
     }
-
-    @GetMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<ArbitroView> getArbitro(@PathVariable int id) {
-        logger.info("Sending all album tracks for album with id "+id);
-        return arbitroRepository.findArbitroNome(id);
-    }
-
-    @PostMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public int saveArbitro(@PathVariable int id, @RequestBody ArbitroFullView nome) {
-        logger.info("Saving new track on album with id: "+id);
-        logger.info(nome.toString());
-        return arbitroRepository.saveArbitroNome(id,nome);
-    }
-*/
-    }
+}

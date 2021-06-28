@@ -6,7 +6,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/london.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
     background-position: center;
     background-size: cover;
     position: relative;
@@ -51,7 +51,7 @@ nav img{
     width: 90%;
     color: #fff;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -70,6 +70,23 @@ nav img{
     position: absolute;
     top: 97%;
     left: 53%;
+    transform: translate(-50%,-50%);
+    text-align: right;
+}
+.text-jogo{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 59%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    text-align: right;
+}
+.text-botoes{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    left: 18%;
     transform: translate(-50%,-50%);
     text-align: right;
 }

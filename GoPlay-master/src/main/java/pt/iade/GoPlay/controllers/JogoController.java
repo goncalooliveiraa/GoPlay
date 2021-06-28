@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,26 +46,10 @@ public class JogoController {
         return jogoRepository.getJogosDisponiveis();
     }
 
-}
-/*
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
     public Jogo saveJogo(@RequestBody Jogo newJogo) {
-        logger.info("Saving Jogo with title: "+newJogo.getTitle());
-        Jogo Jogo = JogoRepository.save(newJogo);
+        logger.info("A guardar jogos com o nome "+newJogo.getId());
+        Jogo Jogo = jogoRepository.save(newJogo);
         return Jogo;
     }
-   
-
-    @GetMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<JogoView> getJogoTracks(@PathVariable int id) {
-        logger.info("Sending all Jogo tracks for Jogo with id "+id);
-        return JogoRepository.findJogoTracks(id);
-    }
-
-    @PostMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public int saveJogoTrack(@PathVariable int id, @RequestBody JogoFullView track) {
-        logger.info("Saving new track on Jogo with id: "+id);
-        logger.info(track.toString());
-        return JogoRepository.saveJogoTrack(id,track);
-    }
-}*/
+}

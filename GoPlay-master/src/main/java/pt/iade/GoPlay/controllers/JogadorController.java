@@ -14,6 +14,7 @@ import pt.iade.GoPlay.models.Jogador;
 import pt.iade.GoPlay.models.exceptions.NotFoundException;
 import pt.iade.GoPlay.models.repositories.JogadorRepository;
 import pt.iade.GoPlay.models.views.LeaderboardJ;
+import pt.iade.GoPlay.models.views.ListaJogadores;
 
 
 
@@ -44,5 +45,10 @@ public class JogadorController {
         return jogadorRepository.getLeaderboardJ();
     }
 
+    @GetMapping(path = "/lista", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<ListaJogadores> getListaJogadores() {
+        logger.info("A enviar a lista de todos os jogadores na sua zona: ");
+        return jogadorRepository.getListaJogadores();
+    }
 
 }

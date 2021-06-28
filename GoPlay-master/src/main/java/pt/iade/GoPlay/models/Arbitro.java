@@ -18,8 +18,6 @@ public class Arbitro {
     private int id;
     @Column (name="Arb_Nome")
     private String nome;
-    @Column (name="Arb_TotalJogos")
-    private int totalJogos;
     @Column (name="Arb_Pontos")
     private int pontos;
 
@@ -31,10 +29,6 @@ public class Arbitro {
 
     public String getNome() {
         return nome;
-    }
-
-    public int getTotalJogos() {
-        return totalJogos;
     }
 
     public int getPontos() {

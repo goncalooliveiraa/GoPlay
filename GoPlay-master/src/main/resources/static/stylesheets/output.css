@@ -1,11 +1,11 @@
 main { 
-    background-color: orange; 
+    background-color: rgb(255, 196, 0); 
     display: block;
     text-align: start;
 }
 
 main > section {
-    background-color: orange; 
+    background-color: rgb(255, 196, 0); 
     width: auto;
     display: flex; 
     flex-wrap: wrap;
@@ -24,3 +24,4 @@ main > section {
     height: 200px;
     margin:auto;
 }
+

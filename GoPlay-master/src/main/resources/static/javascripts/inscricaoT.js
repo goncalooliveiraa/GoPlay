@@ -1,23 +1,3 @@
-window.onload = async function() {
-    try {
-        let torneios = await $.ajax({
-            url: "/api/torneios",
-            method: "get",
-            dataType: "json"
-        });
-        let html="";
-        for (let torneio of torneios) {
-            html+= "<option value="+torneio.id+">"+torneio.data+
-                "</option>";
-        }
-        document.getElementById("torneio").innerHTML = html;
-    } catch (err) {
-        console.log(err);
-        // mensagem de erro para o utilizador      
-    }
-}
-
-
 async function addInscricao() {
     try {
         let inscricao = {

@@ -1,4 +1,3 @@
-
 window.onload = async function() {
     let Torn_Id = sessionStorage.getItem("Torn_Id");
     try {
@@ -9,16 +8,10 @@ window.onload = async function() {
             dataType: "json"
         });
         console.log(torneio);
-        //document.getElementById("cover").src = "/images/cover" + album.AlbumId + ".jpg";  
-        
-        
-        //if (album.Cover != null) {
-        //     document.getElementById("cover").src = album.Cover;
-        //}
-        
 
-        document.getElementById("titulo").innerHTML = torneio.title;
         document.getElementById("nome").innerHTML = torneio.nome;
+        document.getElementById("apelido").innerHTML = torneio.apelido;
+        document.getElementById("data").innerHTML = torneio.data;
 
 
         let inscricoes = await $.ajax({
@@ -38,7 +31,4 @@ window.onload = async function() {
     }
 }
 
-
-function showInscricoes(id) {
-    // TODO: open page with track info
-} 
+function showInscricoes(id) {} 

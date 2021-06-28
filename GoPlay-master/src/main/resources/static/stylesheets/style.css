@@ -1,19 +1,16 @@
-
-   
-   header, main, footer, main section, nav {
+header, main, footer, main section, nav {
     padding: 10px;
     margin: 10px;
     text-align:center;
     color: white;
  }
  nav { background-color:green;}
- header {  background-color: red; }
+ header {  background-color: rgb(130, 180, 255); }
  main { 
-    background-color: orange; 
+    background-color: rgb(255, 196, 0); 
     display: flex;
     flex-wrap: wrap;
   }
- footer { background-color: magenta; }
 
  main > section {
     background-color: blue;
@@ -23,9 +20,122 @@
 td, th {
    text-align: center;
    padding: 3px;
-   border: 2px solid darkred;
+   border: 2px solid rgb(0, 0, 0);
  }
 
  th {
     font-size: 1.5em;
  }
+ 
+ .hero-btn{
+   display: inline-block;
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   border: 1px solid rgb(0, 0, 0);
+   padding: 12px 34px;
+   font-size: 13px;
+   background: transparent;
+   position: relative;
+}
+.hero-btn:hover{
+   border: 1px solid #f44336;
+   background: #f44336;
+   transition: 1s;
+}
+.text-box{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 16%;
+   left: 77%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.text-inscricao{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 28%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.inscricao-btn{
+   display: inline-block;
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   border: 1px solid rgb(0, 0, 0);
+   padding: 12px 34px;
+   font-size: 13px;
+   background: transparent;
+   position: relative;
+   font-size: 20px;
+}
+.inscricao-btn:hover{
+   border: 1px solid rgba(4,9,30,0.7);
+   background: rgba(4,9,30,0.7);
+   transition: 1s;
+   color: white;
+}
+.text-jogos{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 12%;
+   left: 88%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.text-juntar{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 28%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.juntar-btn{
+   display: inline-block;
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   border: 1px solid rgb(0, 0, 0);
+   padding: 12px 34px;
+   font-size: 13px;
+   background: transparent;
+   position: relative;
+   font-size: 20px;
+}
+.juntar-btn:hover{
+   border: 1px solid rgba(4,9,30,0.7);
+   background: rgba(4,9,30,0.7);
+   transition: 1s;
+   color: white;
+}
+.text-leaderboardA{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 28%;
+   left: 90%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.text-leaderboardJ{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 28%;
+   left: 89%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.text-jogadores{
+   width: 90%;
+   color: #fff;
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
