@@ -130,7 +130,8 @@ td, th {
    transform: translate(-50%,-50%);
    text-align: center;
 }
-.text-jogadores{
+
+.text-listaJogadores{
    width: 90%;
    color: #fff;
    position: absolute;
