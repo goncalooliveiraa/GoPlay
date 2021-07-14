@@ -46,7 +46,7 @@ public class JogoController {
         return jogoRepository.getJogosDisponiveis();
     }
 
-    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/guardados", produces= MediaType.APPLICATION_JSON_VALUE)
     public Jogo saveJogo(@RequestBody Jogo newJogo) {
         logger.info("A guardar jogos com o nome "+newJogo.getId());
         Jogo Jogo = jogoRepository.save(newJogo);

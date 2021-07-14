@@ -46,7 +46,7 @@ public class ArbitroController {
         return arbitroRepository.getLeaderboardA();
     }
 
-    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/guardados", produces= MediaType.APPLICATION_JSON_VALUE)
     public Arbitro saveArbitro(@RequestBody Arbitro newArbitro) {
         logger.info("A guardar o arbitro com o nome: "+newArbitro.getNome());
         Arbitro arbitro = arbitroRepository.save(newArbitro);
